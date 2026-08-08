@@ -16,6 +16,18 @@ const facts = [
   },
 ]
 
+function highlightBrand(text) {
+  return text.split(/(QUATERNIUUM)/g).map((part, i) =>
+    part === 'QUATERNIUUM' ? (
+      <span key={i} className="brand">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 function App() {
   return (
     <div className="page">
@@ -31,8 +43,8 @@ function App() {
         <div className="facts-grid">
           {facts.map((fact) => (
             <article key={fact.title} className="fact">
-              <h2>{fact.title}</h2>
-              <p>{fact.body}</p>
+              <h2>{highlightBrand(fact.title)}</h2>
+              <p>{highlightBrand(fact.body)}</p>
             </article>
           ))}
         </div>
