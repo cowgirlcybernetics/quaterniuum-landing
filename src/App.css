@@ -1,5 +1,6 @@
 .page {
   min-height: 100svh;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -7,14 +8,18 @@
   align-items: center;
   justify-content: center;
   min-height: 100svh;
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
   background:
     radial-gradient(ellipse 70% 50% at 50% 45%, rgba(255, 255, 255, 0.04), transparent 70%),
     #262624;
 }
 
 .hero-logo {
+  display: block;
+  width: min(100%, 1095px);
+  max-width: 100%;
   height: auto;
+  min-width: 0;
   opacity: 0;
   transform: scale(0.96);
   animation: hero-in 1.4s ease-out 0.15s forwards;
