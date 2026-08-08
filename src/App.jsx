@@ -12,7 +12,7 @@ const facts = [
   },
   {
     title: 'Enterprise quantum, allegedly',
-    body: 'They ship real hardware, real software, and real roadmaps... but not any actual useful results yet. This site ships vibes and three columns + the promise of 100% endogenously-generated 45 degree "magic". Same same but different.',
+    body: 'They ship real hardware, real software, and real roadmaps... but not any actual useful results yet. This site ships vibes and three columns + the promise of 100% endogenously-generated 45 degree "magic" for universal contextuality. Same same but different.',
   },
 ]
 
