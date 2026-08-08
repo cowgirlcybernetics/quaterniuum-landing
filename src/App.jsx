@@ -41,10 +41,15 @@ function App() {
 
       <section className="facts" aria-label="Facts">
         <div className="facts-grid">
-          {facts.map((fact) => (
+          {facts.map((fact, index) => (
             <article key={fact.title} className="fact">
-              <h2>{highlightBrand(fact.title)}</h2>
-              <p>{highlightBrand(fact.body)}</p>
+              <span className="fact-index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div className="fact-copy">
+                <h2>{highlightBrand(fact.title)}</h2>
+                <p>{highlightBrand(fact.body)}</p>
+              </div>
             </article>
           ))}
         </div>
